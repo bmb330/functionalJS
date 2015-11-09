@@ -57,3 +57,21 @@ storyOfMyLife.addWords('My code broke.'); // 'My code broke.'
 storyOfMyLife.addWords('I ate some ice cream.'); //'My code broke. I ate some ice cream.'
 storyOfMyLife.erase(); // ''
 
+var Toaster = function() {
+  var maxTemp = 500;
+  var temp = 0;
+
+  return {
+    setTemp: function(newTemp) {
+      if (newTemp > maxTemp) {
+        console.log("That temp is to high!");
+      }
+      else {
+        temp = newTemp;
+      }
+    }
+  };
+};
+
+var myToaster = Toaster();
+myToaster.setTemp(300);
